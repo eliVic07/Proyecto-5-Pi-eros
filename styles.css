@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  padding: 40px 20px;
+}
+
+.contenedor {
+  max-width: 880px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+img {
+  display: block;
+}
+
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.autor img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.autor h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.autor span {
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+.burbuja {
+  position: relative;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 24px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.burbuja p + p {
+  margin-top: 16px;
+}
+
+.burbuja::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: -14px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid #1f1f1f;
+}
+
+.tarjeta1 .autor {
+  padding-left: 8px;
+}
+
+
+.tarjeta2 {
+  border: 2px solid #1f1f1f;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.tarjeta2 p {
+  margin-bottom: 20px;
+}
+
+
+.tarjeta3 {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 12px;
+}
+
+.tarjeta3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.info {
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.estrellas {
+  color: gold;
+  font-size: 24px;
+}
+
+.info h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
+.info span {
+  display: block;
+  color: gray;
+  margin-bottom: 14px;
+}
+
+.tarjeta4 {
+  grid-column: 1 / 3;
+  border: 2px solid #1f1f1f;
+  border-radius: 20px;
+  padding: 36px 48px 28px;
+  text-align: center;
+}
+
+.tarjeta4 p {
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.chica {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.grande {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.flecha {
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.tarjeta4 h3 {
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta3,
+  .tarjeta4 {
+    grid-column: auto;
+  }
+
+  .tarjeta3 {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta4 {
+    padding: 28px 20px;
+  }
+}
